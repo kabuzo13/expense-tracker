@@ -3,8 +3,8 @@ import './App.css'
 import CategoryChart from './components/category-chart/categoryChart'
 import Balance from './components/balance indicator/balance'
 
-function App() {
 
+const App = () => {
   return (
     <>
       <div>
@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
