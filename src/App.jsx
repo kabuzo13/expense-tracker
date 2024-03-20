@@ -7,20 +7,19 @@ import { AddTransaction } from './components/container/AddTransaction.jsx';
 import { GlobalProvider } from './context/GlobalState.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 const App = () => {
-  return (
-        <GlobalProvider>
-          <Header/>
-          <div>
-            <Balance/>
-        <IncomeExpenses/>
-        <TransactionList/>
-        <AddTransaction/>
-        </div>
-      </GlobalProvider>
-   
-  );
+    return (
+<GlobalProvider>
+<Header/>
+<div>
+  <Balance/>
+<IncomeExpenses/>
+<TransactionList/>
+<AddTransaction/>
+</div>
+</GlobalProvider>
+
+);
 };
 
 export default App;
