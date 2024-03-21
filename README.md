@@ -1,26 +1,62 @@
-# Expense Tracker
+Expense Tracker
 
-## User Story
-As a user, I want to be able to track my expenses and sort them by category so I know where I am overspending and how much I want to be saving.
+Expense Tracker is a web-based application built with React.js to help users manage their finances effectively. With features like adding transactions, viewing balance, and analyzing income vs. expenses, Expense Tracker provides a convenient way to keep track of financial activities.
 
-## Description
-This expense tracker allows you to add any income you earn, and any expenses you make, and track them by category. It will then graph the categories to show what proportion of your income you spend in each area, e.g. bills, holidays. 
+Features
 
-## Usage
-To use this expense tracker, add all expenses with a description in the 'purchase' section. Any income can be added with a +£, and any expenses with a -£. 
+- Add Transaction: Easily add new transactions with a description and amount.
+- View Balance: See the current balance with a breakdown of income and expenses.
+- Delete Transactions: Remove unwanted transactions with a simple click.
+- View Balance in Other Currencies:** Convert the balance to different currencies for international users.
 
-## Technologies Used
-For this project we used react, node, chart.js, re-charts, context. 
+Technology Stack
 
-## Future Development
-In the future, we will add a 'holiday' section, where the user can budget for their holidays and can use a currency converter and a Purchasing Power Parity API to see how far their budget would stretch in different currencies. 
+- Frontend: React.js
+- State Management: Context API & React Hooks
+- Styling:CSS & Bootstrap
 
-## Installation
-N/A
+Getting Started
 
-## Credits
+To get started with the Expense Tracker application, follow these steps:
 
-## License
-Please refer to the MIT license in the repository. 
+1. Clone the repository:
 
-## Badges
+   ```bash
+   git clone https://github.com/your-username/expense-tracker.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd expense-tracker
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
+
+ Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Acknowledgements
+
+- Raymond Addai-Poku.
+- 
+
+---
+![image](https://github.com/kabuzo13/expense-tracker/assets/110766415/582aa9ca-8e91-4249-aa1c-6367ad572e37)
