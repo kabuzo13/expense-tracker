@@ -1,29 +1,19 @@
-import React from 'react'
-// import {
-//     Chart as ChartJS,
-//     ArcElement,
-//     Tooltip,
-//     Legend
-// } from 'chart.js';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import IncomeExpenses from '../container/IncomeExpenses';
+import TransactionList from '../container/TransactionList';
 
 // import { Pie } from 'react-chartjs-2';
 import { PieChart, Pie, Tooltip } from "recharts";
 
-// ChartJS.register(
-//     ArcElement,
-//     Tooltip,
-//     Legend
-// );
-
 function CategoryChart() {
-  const data = [
-    {name: 'housing', value: 750},
-    {name: 'clothing', value: 100},
-    {name: 'bills', value: 150},
-    {name: 'holidays', value: 500}
-  ];
+  const { transactions } = useContext(GlobalContext);
+  const data = transactions.map(transaction => ({
+    name: transaction.name,
+    value: Math.abs(transaction.amount)
+  }));
   return (
-    <div>
+    <div className='category-chart-container'>
     <h1>Spending Breakdown</h1>
     <PieChart width={400} height={400}>
       <Pie
