@@ -11,7 +11,7 @@ Features
 
 Technology Stack
 
-- Frontend: React.js
+- Frontend: React.js, Chart.js
 - State Management: Context API & React Hooks
 - Styling:CSS & Bootstrap
 
@@ -56,7 +56,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Acknowledgements
 
 - Raymond Addai-Poku.
-- 
+- Beatrix Honigmann
 
 ---
 ![image](https://github.com/kabuzo13/expense-tracker/assets/110766415/582aa9ca-8e91-4249-aa1c-6367ad572e37)
