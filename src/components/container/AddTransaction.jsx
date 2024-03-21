@@ -50,7 +50,7 @@ export const AddTransaction = () => {
                     />
                 </div>
                 <div className="form-control">
-                    <label htmlFor="amount" className="form-label">Amount</label>
+                    <label htmlFor="amount" className="form-label">Amount (Enter negative number for expenses and positive for income)</label>
                     <input
                         type="number"
                         value={amount}
