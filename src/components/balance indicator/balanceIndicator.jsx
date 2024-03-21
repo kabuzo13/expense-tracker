@@ -1,22 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 import Chart from 'chart.js/auto';
 import { Pie } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
-import { useState } from "react";
 import './balance.css';
 
 const balance = () => {
+  const { transactions } = useContext(GlobalContext);
+    const amounts = transactions.map(transaction => transaction.amount);
+    console.log("Transaction Amounts:", amounts);
+    const income = amounts
+        .filter(item => item > 0)
+        .reduce((acc, item) => acc + item, 0) 
+        .toFixed(2);
+        const expense = (
+          amounts
+              .filter(item => item < 0) 
+              .reduce((acc, item) => acc + item, 0) * -1 
+      ).toFixed(2);
+
+      console.log("Income:", income);
+      console.log("Expense:", expense);
+
   useEffect(() => {
     const data = {
       datasets: [{
-        data: [20, 10],
+        data: [Math.abs(income - expense), Math.abs(expense)],
         backgroundColor: ['green', 'red'],
-        borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
         borderWidth: 1,
         circumference: 180,
         rotation: 270,
         cutout: '80%',
-        needleValue: 20, //set to balance - expenses value
+        needleValue: Math.abs(income - expense), //set to balance - expenses value
       }]
     };
 
@@ -72,9 +87,10 @@ const balance = () => {
                 const yCenter = chart.getDatasetMeta(0).data[0].y;
     
                 const circumference = ((chart.getDatasetMeta(0).data[0].circumference / Math.PI) / data.datasets[0].data[0]) * needleValue;
-                const percentageValue = circumference * 100;
-    
-                console.log(circumference);
+                const totalValue = data.datasets[0].data.reduce((a, b) => a + b, 0);
+                const percentageValue = ((needleValue / totalValue) * 100);
+
+                console.log(percentageValue);
     
                 ctx.font = 'bold 30px sans-serif';
                 ctx.fillStyle = 'grey';
@@ -128,7 +144,7 @@ const balance = () => {
     return () => {
       myChart.destroy();
     };
-  }, []);
+  }, [transactions, income, expense]);
 
   return (
     <div>
