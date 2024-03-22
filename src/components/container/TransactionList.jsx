@@ -10,7 +10,7 @@ export const TransactionList = () => {
     return (
         <>
             {/* Displaying header for the transaction list */}
-            <h3>Recent Transactions</h3>
+            <h3>Transactions List</h3>
 
             {/* Rendering the list of transactions */}
             <ul className="list">
@@ -23,4 +23,4 @@ export const TransactionList = () => {
     );
 };
 
-export default TransactionList; // Exporting the TransactionList component
+

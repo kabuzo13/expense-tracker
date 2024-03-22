@@ -40,7 +40,7 @@ export const AddTransaction = () => {
             <h3 className="add-transaction-heading">Add Transaction</h3>
             <form onSubmit={onSubmit} className="transaction-form">
                 <div className="form-control">
-                    <label htmlFor="text" className="form-label">Purchase</label>
+                    <label htmlFor="text" className="form-label">Transaction type</label>
                     <input
                         type="text"
                         value={text}
@@ -68,4 +68,4 @@ export const AddTransaction = () => {
     );
 };
 
-export default AddTransaction;
+
