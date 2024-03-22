@@ -113,8 +113,8 @@ const balance = () => {
         ctx.font = 'bold 15px sans-serif';
         ctx.fillStyle = 'black';
         ctx.textAlign = 'center';
-        ctx.fillText('Success', 0 - innerRadius - widthSlice, 0 + 20);
-        ctx.fillText('Danger', 0 + innerRadius + widthSlice, 0 + 20);
+        ctx.fillText('Danger', 0 - innerRadius - widthSlice, 0 + 20);
+        ctx.fillText('Success', 0 + innerRadius + widthSlice, 0 + 20);
 
         ctx.restore();
       }
