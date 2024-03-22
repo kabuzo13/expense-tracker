@@ -25,4 +25,4 @@ export const Balance = () => {
     );
 };
 
-export default Balance; // Exporting the Balance component
+

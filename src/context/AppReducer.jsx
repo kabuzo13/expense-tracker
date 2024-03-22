@@ -22,4 +22,4 @@ const AppReducer = (state, action) => {
     }
 };
 
-export default AppReducer; // Export the reducer function
+export default AppReducer

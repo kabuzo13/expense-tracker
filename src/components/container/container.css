@@ -4,7 +4,10 @@
 
 /* Variables */
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c; 
+  --background-color: #f9f9f9; 
+  --text-color: #333; 
 }
 
 /* Global Styles */
@@ -15,18 +18,20 @@
 }
 
 body {
-  background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
+/* Fancy Header */
 .fancy-header {
   animation: pulse 1s infinite alternate;
-  background-color: #333;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
   margin: 0;
@@ -46,8 +51,7 @@ body {
 
 /* Container Styles */
 .container {
-  margin: 30px auto;
-  width: 400px;
+  padding: 20px;
 }
 
 /* Heading Styles */
@@ -97,17 +101,17 @@ h4 {
   font-weight: bold;
   margin-left: 5px;
   color: #4CAF50;
-  /* Adjusted balance value font size */
 }
 
 /* Income and Expenses Styles */
 .income-expenses {
-  background-color: #fff;
+  background-color: var(--background-color);
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  border-radius: 8px;
 }
 
 .income-expenses > div {
@@ -115,8 +119,18 @@ h4 {
   text-align: center;
 }
 
-.income-expenses > div:first-of-type {
-  border-right: 1px solid #dedede;
+.income {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.expenses {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .money {
@@ -125,12 +139,12 @@ h4 {
   margin: 5px 0;
 }
 
-.money.plus {
-  color: #2ecc71;
+.money.added {
+  color: lightblue;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: red;
 }
 
 /* Form Styles */
@@ -191,7 +205,7 @@ input[type='number'] {
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid lightskyblue;
 }
 
 .list li.minus {
@@ -220,7 +234,7 @@ input[type='number'] {
 
 /* Add Transaction Styles */
 .add-transaction {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -256,16 +270,37 @@ input[type='number'] {
   border-radius: 5px;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
 /* Category Chart Container Styles */
 .category-chart-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjusted height */
+  height: 100vh;
 }
 
-/* Category Chart Styles */
-.category-chart {
-  width: 80%; /* Adjusted width */
-  max-width: 600px;
+.chart-message {
+  text-align: center;
+  margin-top: 10px;
 }
+
+.chart-message p {
+  font-size: 14px;
+  color: #555; 
+}
+

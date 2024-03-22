@@ -3,7 +3,8 @@ import AppReducer from './AppReducer'; // Import the reducer
 
 // Initial state for the context
 const initialState = {
-    transactions: []
+    transactions: [], 
+    balance: 0
 };
 
 // Create the global context

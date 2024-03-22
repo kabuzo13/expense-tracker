@@ -27,11 +27,11 @@ export const IncomeExpenses = () => {
     // Rendering income and expenses components
     return (
         <div className="income-expenses">
-            <div className="income"> {/* Apply 'income' class */}
+            <div className="income">
                 <h4>Income</h4>
                 <p className='money-added'>£{income}</p>
             </div>
-            <div className="expenses"> {/* Apply 'expenses' class */}
+            <div className="expenses"> 
                 <h4>Expenses</h4>
                 <p className='money-subtract'>£{expense}</p>
             </div>
@@ -39,4 +39,4 @@ export const IncomeExpenses = () => {
     );
 };
 
-export default IncomeExpenses; // Exporting the IncomeExpenses component
+
